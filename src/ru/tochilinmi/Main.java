@@ -5,16 +5,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Put your age");
+        System.out.println("Put your num");
         Scanner in = new Scanner(System.in);
-        int age = in.nextInt();
+        Integer num = in.nextInt();
 
-        if(age < 18){
-            System.out.println("Too yong");
-        } else if(age == 18) {
-            System.out.println("Your are 18th");
-        } else {
-            System.out.println("Your are older then 18th");
+        switch (num){
+            case 1:
+                System.out.println("Variable's equal 1");
+                break;
+            case 23:
+                System.out.println("Variable's equal 23");
+                break;
+            default:
+                System.out.println("Not in case");
+                break;
         }
+
     }
 }
