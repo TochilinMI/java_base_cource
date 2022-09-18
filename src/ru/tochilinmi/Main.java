@@ -9,17 +9,8 @@ public class Main {
         Scanner in = new Scanner(System.in);
         Integer num = in.nextInt();
 
-        switch (num){
-            case 1:
-                System.out.println("Variable's equal 1");
-                break;
-            case 23:
-                System.out.println("Variable's equal 23");
-                break;
-            default:
-                System.out.println("Not in case");
-                break;
-        }
+        int res = num < 10 ? (num + 10) : (num - 10);
+        System.out.println("Result:"+res);
 
     }
 }
