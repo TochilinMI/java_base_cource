@@ -1,11 +1,18 @@
 package ru.tochilinmi;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[][] arr = new int[][]{ {5,6}, {3,2,1}, {1,2,3}, {2,3,5}}; // many dimensions array 2D
-        System.out.println(arr[0][1]);
+        ArrayList<Integer> dynamic_arr = new ArrayList<>(0);
+        dynamic_arr.add(1);
+        dynamic_arr.add(2);
+        dynamic_arr.add(213);
+        dynamic_arr.add(21);
+        dynamic_arr.set(0,21); //set(index, value)
+//        dynamic_arr.clear(); // cleaning array
+        dynamic_arr.remove(1); //remove element by index
+        System.out.println(dynamic_arr.get(2));
     }
 }
