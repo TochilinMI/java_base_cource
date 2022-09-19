@@ -1,18 +1,16 @@
 package ru.tochilinmi;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Integer> dynamic_arr = new ArrayList<>(0);
-        dynamic_arr.add(1);
-        dynamic_arr.add(2);
-        dynamic_arr.add(213);
-        dynamic_arr.add(21);
-        dynamic_arr.set(0,21); //set(index, value)
-//        dynamic_arr.clear(); // cleaning array
-        dynamic_arr.remove(1); //remove element by index
-        System.out.println(dynamic_arr.get(2));
+        LinkedList<String> words = new LinkedList<>();
+        words.add("word1");
+        words.add("word2");
+        words.add("word3");
+        words.add("word4");
+
+        System.out.println(words.get(0));
     }
 }
