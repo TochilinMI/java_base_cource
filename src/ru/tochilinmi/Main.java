@@ -1,19 +1,41 @@
 package ru.tochilinmi;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        float[] arr = new float[]{ 1.2f,23.1f,7.001f};
 
-        try {
-            System.out.println(arr[3]);
-            int i = 100/0;
-        } catch (Exception e){
-            System.err.println("--------------------------------------------------\nError: "+
-                                e+"\n--------------------------------------------------");
-        } finally {
-            System.out.println("Complete try and catch");
+        File file = new File("text.txt");
+
+        if(!file.exists()){
+            try {
+                file.createNewFile();
+            }catch (IOException e){
+                System.err.println("---------------------------------");
+                e.printStackTrace();
+                System.err.println("---------------------------------");
+            }
         }
+        try {
+            System.out.println("Write some text");
+            Scanner in = new Scanner(System.in);
+            PrintWriter pw = new PrintWriter(file);
+
+                pw.println(in.nextLine());
+
+            pw.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("---------------------------------");
+            e.printStackTrace();
+            System.err.println("---------------------------------");
+        }
+
+
 
     }
 }
