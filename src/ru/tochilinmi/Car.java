@@ -9,6 +9,19 @@ abstract class Car {
     private String color;
     private boolean isWork;
 
+    //Nested class
+    public class Driving{
+        private boolean isDrive;
+        Driving(boolean isDrive){
+            this.isDrive = isDrive;
+        }
+        public void drive(){
+            System.out.println(this.isDrive);
+        }
+
+    }
+
+    Driving engine = new Driving(true);
     //construct
     public Car(String model, Float weight, String color, boolean isWork) {
 //        this.speed = speed;
@@ -36,5 +49,6 @@ abstract class Car {
                 );
     }
 
+    //abstract method
     abstract void enginStart();
 }

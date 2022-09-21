@@ -8,7 +8,29 @@ public class Main {
 
         BMW m5 = new BMW(true,"M5", 2300.42f, "black", true,300);
         m5.printAll();
-//        m5.enginStart();
-//        System.out.println(BMW.num);
+        m5.enginStart();
+
+        //Anonymous class
+        Audi obj = new Audi(){
+            private boolean isWork;
+
+            public void isDrive(){
+                this.isWork = true;
+            }
+
+            public void printAll(){
+                System.out.println(isWork);
+            }
+        };
+
+        obj.printAll();
+        obj.isDrive();
+        obj.printAll();
+
+    }
+
+    private static class Audi {
+        public void printAll(){}
+        public void isDrive(){}
     }
 }
