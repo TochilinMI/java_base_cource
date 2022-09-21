@@ -3,15 +3,15 @@ package ru.tochilinmi;
 public class Car {
 
     //Valuable
-    private Integer speed;
+    protected Integer speed; //extends visible
     private String model;
     private Float weight;
     private String color;
     private boolean isWork;
 
     //construct
-    public Car(Integer speed, String model, Float weight, String color, boolean isWork) {
-        this.speed = speed;
+    public Car(String model, Float weight, String color, boolean isWork) {
+//        this.speed = speed;
         this.model = model;
         this.weight = weight;
         this.color = color;
