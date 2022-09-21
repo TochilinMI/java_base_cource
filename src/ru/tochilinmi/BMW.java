@@ -17,4 +17,9 @@ public class BMW extends Car{
         String isMPerfomance = this.isMPerfomance ? "is":"isn't";
         System.out.println("Car "+isMPerfomance+" M Perfomance");
     }
+
+    @Override
+    void enginStart() {
+        System.out.println("Car starting by a button");
+    }
 }

@@ -1,6 +1,6 @@
 package ru.tochilinmi;
 
-public class Car {
+abstract class Car {
 
     //Valuable
     protected Integer speed; //extends visible
@@ -35,4 +35,6 @@ public class Car {
                          + " and car is " + isWork
                 );
     }
+
+    abstract void enginStart();
 }

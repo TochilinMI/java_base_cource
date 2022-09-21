@@ -7,8 +7,8 @@ public class Main {
 //        bmv.printAll();
 
         BMW m5 = new BMW(true,"M5", 2300.42f, "black", true,300);
-//        m5.printAll();
-
+        m5.printAll();
+//        m5.enginStart();
 //        System.out.println(BMW.num);
     }
 }
